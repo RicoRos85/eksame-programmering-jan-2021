@@ -5,3 +5,5 @@ class Image {
         this.size = size;
     }
 }
+
+module.exports = Image;
