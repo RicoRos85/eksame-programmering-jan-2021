@@ -4,7 +4,7 @@ const localStorage = new LocalStorage("./localStorage");
 const userData = "../userData.json";
 
 // check if user exists
-const checkOrCreateUser = (newUserData) => {
+const checkUser = (newUserData) => {
   const data = localStorage.getItem("userData.json");
   let users = JSON.parse(data);
   console.log("-> ", newUserData.email);
@@ -39,10 +39,19 @@ const loginUser = (user) => {
   return loggedIn;
 };
 
-function updateUser() {}
-function deleteUSer() {}
+const isLoggedIn = (user) => {}
+const logoutUser = (user) => {}
+const updateUser = () => {}
+const deleteUser = () => {}
+const viewMatches = () => {}
 
 module.exports = {
-  checkOrCreateUser,
+  checkUser,
+  addNewUser,
   loginUser,
+  isLoggedIn,
+  logoutUser,
+  updateUser,
+  deleteUser,
+  viewMatches
 };
